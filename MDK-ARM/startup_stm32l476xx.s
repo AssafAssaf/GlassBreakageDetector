@@ -1,8 +1,8 @@
 ;********************** COPYRIGHT(c) 2016  STMicroelectronics ******************
 ;* File Name          : startup_stm32l476xx.s
 ;* Author             : MCD Application Team
-;* Version            : V1.6.0
-;* Date               : 28-October-2016
+;* Version            : V1.1.1
+;* Date               : 29-April-2016
 ;* Description        : STM32L476xx Ultra Low Power devices vector table for MDK-ARM toolchain.
 ;*                      This module performs:
 ;*                      - Set the initial SP
@@ -45,7 +45,7 @@
 ;   <o> Stack Size (in Bytes) <0x0-0xFFFFFFFF:8>
 ; </h>
 
-Stack_Size      EQU     0x400;
+Stack_Size      EQU     0x2000;
 
                 AREA    STACK, NOINIT, READWRITE, ALIGN=3
 Stack_Mem       SPACE   Stack_Size
@@ -56,7 +56,7 @@ __initial_sp
 ;   <o>  Heap Size (in Bytes) <0x0-0xFFFFFFFF:8>
 ; </h>
 
-Heap_Size       EQU     0x200;
+Heap_Size       EQU     0x2000;
 
                 AREA    HEAP, NOINIT, READWRITE, ALIGN=3
 __heap_base

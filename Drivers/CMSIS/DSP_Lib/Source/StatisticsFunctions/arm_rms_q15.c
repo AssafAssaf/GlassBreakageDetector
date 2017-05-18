@@ -117,7 +117,7 @@ void arm_rms_q15(
 
   /* Truncating and saturating the accumulator to 1.15 format */
   /* Store the result in the destination */
-  arm_sqrt_q15(__SSAT((sum / (q63_t)blockSize) >> 15, 16), pResult);
+  arm_sqrt_q15(__SSAT((sum / (q63_t)blockSize) >> 4, 16), pResult);
 
 #else
 
@@ -142,7 +142,10 @@ void arm_rms_q15(
 
   /* Truncating and saturating the accumulator to 1.15 format */
   /* Store the result in the destination */
-  arm_sqrt_q15(__SSAT((sum / (q63_t)blockSize) >> 15, 16), pResult);
+	in = (q31_t)(sum >> 15);
+	in1 = __SSAT((in / blockSize), 16);
+	
+  arm_sqrt_q15(in1, pResult);
 
 #endif /* #ifndef ARM_MATH_CM0_FAMILY */
 

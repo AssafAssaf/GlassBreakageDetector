@@ -38,7 +38,8 @@
   */
 
 /* Includes ------------------------------------------------------------------*/
-#include "main.h"
+
+#include "stm32l4xx_hal.h"
 #include "stm32l4xx_it.h"
 
 /** @addtogroup STM32L4xx_HAL_Examples
@@ -55,6 +56,7 @@
 /* Private variables ---------------------------------------------------------*/
 
 extern DMA_HandleTypeDef hdma_dfsdmReg_FLT[];
+
 /* Private function prototypes -----------------------------------------------*/
 /* Private functions ---------------------------------------------------------*/
 
