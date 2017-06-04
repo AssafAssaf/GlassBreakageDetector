@@ -4,7 +4,7 @@ An ultra-low power glass breakage detector based on STM32L476 microcontroller.
 
 The detector correctly distinguish between everyday sounds and the sound of breaking glass whatever the type of glass involved, using signal processing and machine learning algorithms.
 
-* [Project's Final Report](https://github.com/AssafAssaf/GlassBreakageDetector/blob/master/Final%20Report.pdf)
+* [Project Final Report](https://github.com/AssafAssaf/GlassBreakageDetector/blob/master/Final%20Report.pdf)
 
 * [Matlab - Main Algorithm](https://github.com/AssafAssaf/GlassBreakageDetector/tree/master/Matlab/Main%20Algorithm)
 
@@ -38,7 +38,7 @@ The following diagram simplifies the classification process:
 
 ## Further Reading
 
-For more information, please refer to the projects final report.
+For more information, please refer to the project final report.
 
 
 
