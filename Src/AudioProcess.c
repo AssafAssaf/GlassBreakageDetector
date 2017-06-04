@@ -75,15 +75,15 @@ void HAL_DFSDM_FilterRegConvCpltCallback(DFSDM_Filter_HandleTypeDef *hdfsdm_filt
 					arm_rms_q15(HP_filteredWaitBuff[j], WAIT_BUFF_LEN, &rms[j]);
 				}
 #ifndef SIMBA_BOARD
-				correlation = xcorrelation(HP_filteredWaitBuff[0], HP_filteredWaitBuff[1]);
 				
+				// cross correlation step - currently the estimation process ignores the correlation and RMS values
+				correlation = xcorrelation(HP_filteredWaitBuff[0], HP_filteredWaitBuff[1]);
 				if (rms[0] > rms[1])
 				{
 					//sprintf(str, "correlation value: %d, RMS: %d > %d -> source is on left\r\n", correlation, rms[0], rms[1]);
 				} else {
 					//sprintf(str, "correlation value: %d, RMS: %d < %d -> source is on right\r\n", correlation, rms[0], rms[1]);
 				}
-				//HAL_UART_Transmit(&uartHandle, (uint8_t*)str, strlen(str), TIMEOUT);
 				
 #else
 				correlation = 0;
@@ -203,15 +203,16 @@ bool AnalyzeSamples(int16_t	srcBuffer[], int16_t* blockIndex)
 /*******************************************************************************/
 int8_t xcorrelation(int16_t x[], int16_t y[])
 {
-	q15_t t_product[100] = {0};
+	q15_t t_product[CORR_PRODUCT_LEN] = {0};
 	q15_t corr = 0, corr_prev = 0;
 	int peak = 0;
 	
+	/* simple cross correlation calculation */
 	for (int i = CORR_MIN; i < CORR_MAX; i++)
 	{
-		arm_mult_q15(&x[150], &y[150 + i], t_product, 100);
+		arm_mult_q15(&x[CORR_SIG_CENTER], &y[CORR_SIG_CENTER + i], t_product, CORR_PRODUCT_LEN);
 		
-		for (int j = 0; j < 150; j++)
+		for (int j = 0; j < CORR_SIG_CENTER; j++)
 		{
 			corr += t_product[j];
 		}

@@ -32,7 +32,7 @@ int main(void)
   HAL_Init();
 	__HAL_RCC_PWR_CLK_ENABLE();
 	
-  /* Configure the system clock to have a frequency of 80 MHz */
+  /* Configure the system clock to have a frequency of 40 MHz */
   SystemClock_Config();
 
   /* Configure LED */
@@ -67,7 +67,7 @@ void Error_Handler(void)
   while (1)
   {
 		Toggle_LED();
-		HAL_Delay(200);
+		HAL_Delay(BLINK_DELAY);
   }
 }
 

@@ -17,9 +17,11 @@
 #include "ConfigParameters.h"
 
 #define SaturaLH(N, L, H) (((N)<(L))?(L):(((N)>(H))?(H):(N)))
+
 #define CORR_MIN -5
 #define CORR_MAX 5
-
+#define CORR_PRODUCT_LEN 100
+#define CORR_SIG_CENTER 150
 
 
 /* Structures */

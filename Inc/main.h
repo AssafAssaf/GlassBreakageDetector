@@ -11,6 +11,8 @@
 #ifndef __MAIN_H
 #define __MAIN_H
 
+#define BLINK_DELAY 200
+
 void Error_Handler(void);
 
 #endif
