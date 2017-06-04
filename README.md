@@ -36,6 +36,9 @@ The following diagram simplifies the classification process:
 ![Alt text](/Alg_Simplified.jpg?raw=true "Title")
 
 
+## Further Reading
+
+For more information, please refer to the projects final report.
 
 
 
