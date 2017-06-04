@@ -17,6 +17,7 @@ The detector correctly distinguish between everyday sounds and the sound of brea
 ## Getting Started
 
 It is possible to run the project on both Simba board and Nucleo-L476 (with CCA02M1 extentsion board).
+
 The default version is for the Nucleo board. In order to use the Simba board, simply define the preprocessor symbol SIMBA_BOARD.
 
 
