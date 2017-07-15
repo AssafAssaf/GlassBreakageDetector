@@ -49,7 +49,7 @@ More information available [here](http://www.st.com/en/embedded-software/x-cube-
 
 ## Burning Tools
 
-If you dont want to install Keil IDE, you can program the burn using [ST-Link](http://www.st.com/en/embedded-software/stsw-link004.html) utility. 
+If you dont want to install Keil IDE, you can program the boards using [ST-Link](http://www.st.com/en/embedded-software/stsw-link004.html) utility. 
 The binary files for both versions located [here](https://github.com/AssafAssaf/GlassBreakageDetector/tree/master/Binaries).
 
 
