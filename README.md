@@ -36,6 +36,11 @@ The following diagram simplifies the classification process:
 ![Alt text](/Alg_Simplified.jpg?raw=true "Title")
 
 
+## Burning Tools
+
+If you dont want to install Keil IDE, you can program the burn using [ST-Link](http://www.st.com/en/embedded-software/stsw-link004.html) utility. The binary files for both versions located [here]().
+
+
 ## Further Reading
 
 For more information, please refer to the project final report.
