@@ -37,6 +37,16 @@ The following diagram simplifies the classification process:
 ![Alt text](/Alg_Simplified.jpg?raw=true "Title")
 
 
+## Board Modification
+
+In order to use the Nucleo board with two MEMS microphones, change the MEMSMIC-1 extension board solder bridges to the following configuration:
+
+![Alt text](/SB_Configuration.jpg?raw=true "Title")
+
+In addition, J2 must be placed in position 2-3.
+More information available [here](http://www.st.com/en/embedded-software/x-cube-memsmic1.html).
+
+
 ## Burning Tools
 
 If you dont want to install Keil IDE, you can program the burn using [ST-Link](http://www.st.com/en/embedded-software/stsw-link004.html) utility. 
