@@ -20,6 +20,7 @@ It is possible to run the project on both Simba board and Nucleo-L476 (with CCA0
 
 The default version is for the Nucleo board. In order to use the Simba board, simply define the preprocessor symbol SIMBA_BOARD.
 
+Note that in order to use the Nucleo board version, some physical modifications should be made. Please refer to "Board Modifications" section below.
 
 ![Alt text](/SimbaBoard.jpg?raw=true "Title")
 
